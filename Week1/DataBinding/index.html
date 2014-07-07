@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Intro to Data Binding</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+        <script src = "js/angular.js"></script>
+        <script src="js/app.js"></script>
+    </head>
+
+    <body ng-app>
+    <!-- Data Binding is when I have data in my model & whenever that data changes, I want my view to automatically update itself to reflect those changes  -->
+        <h1>Intro to Data Binding</h1>
+        <div ng-controller="DBController">
+            <input type="text" ng-model="userName" />
+
+            <!--Add Button -->
+            <input type="Submit" ng-click="addName() " />    <!--Here we call a function out of our controller -->
+                <p>Hello, {{userName}}. </p>
+
+            <!--Array of Names -->
+            <ul>
+                <li ng-repeat="name in nameArray"><!--Repeats one time in the array -->
+                    {{ name }}
+                    <!--Delete Button -->
+                    <button ng-click="deleteName(name)">X</button><!--pass into the deleteName function the object that needs to be deleted(name)-->
+                </li>
+            </ul>
+
+
+
+
+        </div>
+    </body>
+</html>

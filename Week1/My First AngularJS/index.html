@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+    <title>My First AngularJS Application</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+    <script src = "js/angular.js"></script>
+    <script src="js/app.js"></script>
+</head>
+
+<body ng-app> <!--when using ng-app, anything contained in this element is part of my angular-->
+    <div ng-controller="MyController"><!--controller function will be controlled here -->
+        <h1>Hello {{ myName }}</h1>
+        <p> 2 + 5 = {{ 2+5 }} </p><!-- Data Binding {{}} allows angular to swap out placeholders for variables in memory -->
+    </div>
+
+
+</body>
+</html>
