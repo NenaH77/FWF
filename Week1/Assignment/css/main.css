@@ -1,0 +1,46 @@
+body{
+    margin: .5em 1em;
+    padding: .3em;
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+}
+
+#container{
+    background: #dca7a7;
+    padding: 2em;
+    width: 60%;
+}
+
+
+input[type=text]{
+    border: .05em solid #f5e79e;
+    border-radius: .3em;
+    box-shadow: 0 0 0.4em rgba(0, 0, 0, 0.4) inset;
+}
+
+button{
+    cursor: pointer;
+    white-space: nowrap;
+    margin-right: .7em;
+}
+
+button:hover{
+    color: #f5e79e;
+}
+
+button:active{
+    color: #f0ad4e;
+}
+
+h2{
+    font-weight: normal;
+}
+
+ul{
+    list-style-type: none;
+    font-weight: lighter;
+}
+
+ul li{
+    padding-right: .7em;
+
+}

@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Grocery List</title>
+        <link rel="stylesheet" href="css/main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+        <script src = "js/angular.js"></script>
+        <script src="js/app.js"></script>
+    </head>
+    <body ng-app>
+
+    <div id="container">
+        <h1>My Grocery List </h1>
+        <div ng-controller = "GroceryController">
+            <input type="text" name="txtholder" ng-model="toBuy" size="30" placeholder="Enter your Grocery item here" />
+            <button ng-click="addItem()">Add</button>
+
+            <div class="inCart">
+                <h2>Items in Cart</h2>
+                <ul ng-repeat="myList in groceryList">
+                    <li>
+                        <button ng-click="deleteItem(myList)">Delete</button><b>{{myList}}</b>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    </body>
+
+</html>
