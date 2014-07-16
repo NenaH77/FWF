@@ -1,9 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>Local Storage</title>
+    <script src="js/angular.js" type="text/javascript"></script>
+    <script src="js/app.js" type="text/javascript"></script>
+    <script src="js/dataService.js" type="text/javascript"></script>
 </head>
-<body>
+<body ng-app="MyEmpDirectory">
+<div id="container" ng-controller="EmployeeController">
+    <div id="insertNewEmployee">
+        <label for="newEmpName">Name</label>
+        <input id="newEmployeeName" type="text" ng-model="newEmployee.name"/>
 
+        <label for="newEmpAddress">Address</label>
+        <input id="newEmployeeAddress" type="text" ng-model="newEmployee.address"/>
+
+        <label for="newEmpCity">City</label>
+        <input id="newEmployeeCity" type="text" ng-model="newEmployee.city"/>
+
+        <label for="newEmpState">State</label>
+        <input id="newEmployeeState" type="text" ng-model="newEmployee.state"/>
+
+        <label for="newEmpZip">Zip</label>
+        <input id="newEmployeeZip" type="text" ng-model="newEmployee.zip"/>
+
+        <input type="submit" value="Add" ng-click="addEmployees(newEmployee.name)" />
+    </div>
+
+    <br>
+    <div class="empInfoAdded"> You are adding:
+        {{newEmployee.name}}
+        {{newEmployee.address}}
+        {{newEmployee.city}}
+        {{newEmployee.state}}
+        {{newEmployee.zip}}
+    </div>
+    </br>
+
+    <div id="employeeList">
+        <ol>
+            <li ng-repeat="person in EmployeeInfo track by $index">
+                {{person.name }}
+                {{person.address}}
+                {{person.city}},
+                {{person.state}}
+                {{person.zip}}
+                <button ng-click="deleteEmployees($index)">x</button>
+            </li>
+        </ol>
+    </div>
+
+</div>
 </body>
+
 </html>
