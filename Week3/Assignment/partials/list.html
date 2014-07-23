@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>List View</title>
+        <!--<script type="text/ng-template" id="partials/ShowOrder.html"></script>-->
+    </head>
+    <body>
+        <h2>Coffee List</h2>
+        <nav>
+            <a href="#/add">Add Item</a><br>
+        </nav>
+        <table>
+            <tr>
+                <th>Type</th>
+                <th>Size</th>
+                <th>Price</th>
+            </tr>
+            <tr ng-repeat="newCoffee in coffeeList track by $index">
+                <td><a href="#/detail/{{$index}}">{{newCoffee.type}}</a></td>
+                <td>{{newCoffee.size}}</td>
+                <td>{{newCoffee.price}}</td>
+                <td><button ng-click="remove($index)">Remove</button></td>
+            </tr>
+        </table>
+    </body>
+</html>

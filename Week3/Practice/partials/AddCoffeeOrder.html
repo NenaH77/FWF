@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add Coffee Order</title>
+    </head>
+    <body>
+    <h2>Add Coffee</h2>
+    <form class="newCoffee">
+        <label for="newCoffeeType">Type</label>
+        <input id="newCofType" name="type" ng-model="newCoffee.type" />
+
+        <label for="newCoffeeSize">Size</label>
+        <input id="newCofSize" name="size" ng-model="newCoffee.size" />
+
+        <label for="newCoffeePrice">Price</label>
+        <input id="newCofPrice" name="price" ng-model="newCoffee.price" />
+
+        <input type="Submit" value="Add" ng-click="addCoffee(newCoffee.type)" />
+    </form>
+     <div class="coffeeInfoAdded">
+         <p>Type: {{newCoffee.type}}</p>
+         <p>Size: {{newCoffee.size}}</p>
+         <p>Price: {{newCoffee.price}}</p>
+     </div>
+
+    <div id="coffeeList">
+        <ul>
+            <li ng-repeat="coffee in coffeeList">
+                <p>
+                    Type: {{coffee.type}}
+                    Size: {{coffee.size}}
+                    Price:{{coffee.price}}
+                </p>
+                <button ng-click="remove(rmvcoffee)">Remove</button>
+            </li>
+        </ul>
+    </div>
+    </body>
+</html>

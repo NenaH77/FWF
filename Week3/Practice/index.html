@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Coffee Project</title>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body ng-app="CoffeeApp" ng-controller="CoffeeController">
+    <h1>{{message}}</h1>
+    <div class="container">
+        <ul>
+            <li><a href="#AddCoffeeOrder">Add Coffee Order</a></li>
+            <li><a href="#MenuOrder">Menu Order</a></li>
+        </ul>
+        <div ng-view></div>
+    </div>
+</body>
+</html>

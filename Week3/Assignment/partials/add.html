@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add</title>
+    </head>
+    <body>
+    <h2>Add Coffee</h2>
+    <form class="newCoffee">
+        <label for="type">Type</label>
+        <input id="type" name="type" ng-model="cofType" />
+
+        <label for="size">Size</label>
+        <input id="size" name="size" ng-model="cofSize" />
+
+        <label for="price">Price</label>
+        <input id="price" name="price" ng-model="cofPrice" />
+
+        <button ng-click="addCoffee()">Add</button>
+    </form>
+    </body>
+</html>
