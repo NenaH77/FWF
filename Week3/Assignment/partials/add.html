@@ -4,18 +4,25 @@
         <title>Add</title>
     </head>
     <body>
-    <h2>Add Coffee</h2>
-    <form class="newCoffee">
-        <label for="type">Type</label>
-        <input id="type" name="type" ng-model="cofType" />
+    <div id="wrapper">
+        <nav class="nav">
+            <a href="#/list">List View</a>
+        </nav>
+        <div class="container">
+            <h2>Add Coffee</h2>
+            <form class="add">
+                <label for="type">Type</label>
+                <input id="type" type="text" name="type" ng-model="cofType" /><br>
 
-        <label for="size">Size</label>
-        <input id="size" name="size" ng-model="cofSize" />
+                <label for="size">Size</label>
+                <input id="size" type="text" name="size" ng-model="cofSize" /><br>
 
-        <label for="price">Price</label>
-        <input id="price" name="price" ng-model="cofPrice" />
+                <label for="price">Price</label>
+                <input id="price" type="text" name="price" ng-model="cofPrice" /><br>
 
-        <button ng-click="addCoffee()">Add</button>
-    </form>
+                <button ng-click="addCoffee()">Add</button><br>
+            </form>
+        </div>
+    </div>
     </body>
 </html>

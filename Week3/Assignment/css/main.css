@@ -1,0 +1,72 @@
+html, body{
+    font: 1em Bitter, Georgia, "Times New Roman", Times, serif;
+    color: #ffffff;
+    margin: .02em;
+    padding: .04em;
+}
+
+header{
+    height: 1em;
+    line-height: 2em;
+    width: 100%;
+}
+
+#wrapper{
+    background: #593c1f;
+    padding: 0;
+    margin: auto;
+    width: 50%;
+}
+
+.nav{
+    float: right;
+    position: absolute;
+    margin: 2em;
+}
+
+.nav a{
+    margin: 1em;
+    padding: .5em;
+    background: #adc3d8;
+    color: #eeffff;
+    text-decoration: none;
+}
+
+div.container{
+    margin: 2.5em;
+    padding: 4em;
+}
+
+/****************list.html********************/
+table th{
+    margin-bottom: 2em;
+    padding-bottom: 2em;
+}
+
+tr td {
+    margin: .05em;
+    padding: 1em;
+}
+
+td a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/****************add.html******************/
+.add label {
+    display: block;
+    padding: .05em;
+    margin: .3em;
+}
+
+.add button{
+    margin-top: .7em;
+}
+
+input[type="text"]{
+    cursor: pointer;
+    border: 1px solid #eeffff;
+    border-radius: 2px;
+    box-shadow: 0 0 0.6em rgba(121, 181, 242, 0.8) inset;
+}

@@ -5,11 +5,13 @@
         <!--<script type="text/ng-template" id="partials/ShowOrder.html"></script>-->
     </head>
     <body>
-        <h2>Coffee List</h2>
-        <nav>
-            <a href="#/add">Add Item</a><br>
+    <div id="wrapper">
+        <nav class="nav">
+            <a href="#/add">Add Item</a>
         </nav>
-        <table>
+        <div class="container">
+            <h2>Coffee List</h2>
+            <table class="list">
             <tr>
                 <th>Type</th>
                 <th>Size</th>
@@ -22,5 +24,7 @@
                 <td><button ng-click="remove($index)">Remove</button></td>
             </tr>
         </table>
+        </div>
+    </div>
     </body>
 </html>
